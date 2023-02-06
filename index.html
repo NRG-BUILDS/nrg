@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+        <title>NRG: The Portfolio</title>
+    </head>
+    <body>
+        <section class="nav_container">
+            <div class="logo">
+                <span>NRG</span>
+
+            </div>
+            <div class="nav"><!--PC NAV-->
+                <a href="">about</a>
+                <a href="">skills</a>
+                <a href="">projects</a>
+                <button onclick="showNav()" class="navBtn"><i class="bi bi-list"></i></button>
+                </div>
+            </div>
+        </section>
+        <section class="side_nav">
+            <div class="nav_content">
+                <button class="navBtn"><i class="bi bi-x-lg" onclick="showNav()"></i></button>
+                <a href="#hero" onclick="showNav()">About</a>
+                <a href="#skills" onclick="showNav()">Skills</a>
+                <a href="#contact" onclick="showNav()">Contact</a>
+            </div>
+            
+            
+        </section>
+
+        <section class="hero" id="hero">
+            <img src="heroImage.png" alt="" class="hero_image">
+            <div class="big_text_wrapper">
+                <span class="main_title">EMMANUEL</span>
+                <span class="small_title">OMOLAJU</span>
+                <div>
+                    <span class="dynamic_title">NRG</span>
+                </div>
+                
+            </div>
+            <div class="textbox t1">
+                <span class="badge">1</span>
+                <span>As a frontend developer,
+                    I specialize in building the user
+                    interface of web applications.
+                </span>
+            </div>
+            <div class="textbox t2">
+                <span class="badge">2</span>
+                <span>I have a strong foundation in
+                    HTML, CSS and Javascript and I am skilled in creating 
+                    visually appealing websites.
+                </span>
+            </div>
+        </section>
+
+        <section id="about" class="skill_panel">
+            <div class="skill_text_wrapper">
+                <span class="skill_text reveal">As a <span class="special_text">front-end</span> developer, I specialize in building the user
+                interface of web applications.
+                </span>
+                <div class="contact_button_container">
+                    <a href="#contact"><button>Contact Me</button></a>
+                </div>
+            </div>    
+                <div id="skills" class="skill_tray reveal">
+                    <div>
+                        <label for="HTML5">HTML5        </label>
+                        <progress max="100" value="90">      </progress>
+                    </div>
+                    <div>
+                        <label for="CSS3">CSS3        </label>
+                        <progress max="100" value="70">      </progress>
+                    </div>
+                    <div>
+                        <label for="Js">JavaScript </label>
+                        <progress max="100" value="75"> </progress>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="stack_icons">
+                <img src="html.jpg" alt="html5" id="htmlIcon">
+                <img src="css.jpg" alt="css3" id="cssIcon">
+                <img src="js-icon.png" alt="js" id="jsIcon">
+                <img src="react.png" alt="react" id="rtIcon">
+                <img src="bootstrap.svg.png" alt="btstrap" id="bsIcon">
+            </div>
+        </section>
+        <section class="project_section">
+            <h4 class="dynamic_title">Projects</h4>
+            <div class="project_display_mobile">
+                <!--javascript generated-->
+                
+            </div>
+            <div class="project_grid_PC">
+                <div class="project_list">
+                    <!--javascript generated-->
+                </div>
+                <div class="project_preview">
+                    <img src="furniture.jpg" alt="" id="project_pic">
+                    <p id="project_info"></p>
+                </div>
+            </div>  
+        </section>
+        <section id="contact" class="contact reveal">
+            <div class="form_container">
+                <div class="head_wrapper">
+                    <span>Reach Out To Me</span>
+                </div>
+                <form id="emailForm">
+                    <div class="field">
+                        <label for="from_name">Name</label>
+                    <input type="text" name="from_name" id="from_name">
+                    </div>
+                    <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" rows="7" id="message"></textarea>
+                    </div>
+                    <div class="field">
+                    <label for="reply_to">Email:</label>
+                    <input type="text" name="reply_to" id="reply_to">
+                    </div>
+                    <div class="button_wrapper">
+                        <button id="button" onclick="validateForm()">Send Email</button><br>
+                    <span id="err-message"></span>    
+                    </div>
+                    
+                </form>
+                <div class="icon_tray">
+                    <a href="twitter.com"><i class="bi bi-twitter"></i></a>
+                    <a href="linkedin.com"><i class="bi bi-linkedin"></i></a><a href="github.com"><i class="bi bi-github"></i></a>
+            </div>
+            
+        </section>
+        <footer>
+            <p>© EMMANUEL Omolaju (NRG) 2022</p>
+        </footer>
+    <script src="anime.js"></script>    
+    <script src="app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('njD3jzDUHL3BZwKMf')
+    </script>
+    </body>
+</html>
