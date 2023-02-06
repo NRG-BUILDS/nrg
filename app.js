@@ -10,8 +10,8 @@ const projectArray =[];
 function Projects(Name, Pic, Src) { 
     this.name = Name;
     this.pic = Pic;
-    this.link = "https://nrg-portfolio.netlify.app/" + this.link;
-    this.gitLink = `https://github.com/NRG-BUILDS/portfolio/tree/main/${this.link}`;
+    this.link = "https://nrg-portfolio.netlify.app/" + Src;
+    this.gitLink = `https://github.com/NRG-BUILDS/portfolio/tree/main/${}`;
     
     projectArray.push(this);
 }
