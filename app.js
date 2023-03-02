@@ -7,42 +7,54 @@ const projectPicDisplay = document.getElementById('project_pic');
 const projectInfo = document.getElementById('project_info')
 const projectArray =[];
 
-function Projects(Name, Pic, Src) { 
+function Projects(Name, Pic, Link, GitLink) { 
     this.name = Name;
     this.pic = Pic;
-    this.link = "https://nrg-portfolio.netlify.app/" + Src;
-    this.gitLink = `https://github.com/NRG-BUILDS/portfolio/tree/main/${Src}`;
+    this.link = Link;
+    this.gitLink = GitLink;
     
     projectArray.push(this);
 }
 const project1 = new Projects(
     "Dammy's Cakes World",
     "cakes.jpg",
-    "./dammycakes/");
+    "https://nrg-portfolio.netlify.app/dammycakes/",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/dammycakes");
 const project2 = new Projects(
     "Furniture Site (Mobile view)",
     "furniture.jpg",
-    "./furniture/");
+    "https://nrg-portfolio.netlify.app/furniture/",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/furniture");
 const project3 = new Projects(
     "Bookstore App (Mobile Only)",
     "bookstore.jpg",
-    "./bookstore/bookstore.html");
+    "https://nrg-portfolio.netlify.app/bookstore/bookstore.html",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/bookstore/bookstore.html");
 const project4 = new Projects(
     "Hotel Landing Page (Mobile and PC)",
     "hotel.jpg",
-    "./hotel/");
+    "https://nrg-portfolio.netlify.app/hotel/",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/hotel");
 const project5 = new Projects(
     "A Bunch Of JavaScript Calculators",
     "calculator.jpg",
-    "./calculator/");    
+    "https://nrg-portfolio.netlify.app/calculator/",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/calculator");    
 const project6 = new Projects( 
     "Online Music Streaming App",
     "music.jpg",
-    "./music-player/");    
+    "https://nrg-portfolio.netlify.app/music-player/",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/music-player");    
 const project7 = new Projects( 
     "Fashion Store",
     "shizzabelle.jpg",
-    "./shizzabelle/");
+    "https://nrg-portfolio.netlify.app/shizzabelle/",
+    "https://github.com/NRG-BUILDS/portfolio/tree/main/shizzabelle");
+const project8 = new Projects(
+    "Weather App",
+    "weather.jpg",
+    "https://nrg-builds.github.io/NRG-weather/",
+    "https://github.com/NRG-BUILDS/NRG-weather");    
 function loadProjectListPc() { 
     let text = ""
     for (i = projectArray.length - 1; i > -1; i--) { 
