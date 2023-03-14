@@ -54,7 +54,16 @@ const project8 = new Projects(
     "Weather App",
     "weather.jpg",
     "https://nrg-builds.github.io/NRG-weather/",
-    "https://github.com/NRG-BUILDS/NRG-weather");    
+    "https://github.com/NRG-BUILDS/NRG-weather");
+const project9 = new Projects(
+
+    "Movie Information App",
+
+    "movieroom.jpg",
+
+    "https://nrg-builds.github.io/movie-app",
+
+    "https://github.com/NRG-BUILDS/movie-app");
 function loadProjectListPc() { 
     let text = ""
     for (i = projectArray.length - 1; i > -1; i--) { 
