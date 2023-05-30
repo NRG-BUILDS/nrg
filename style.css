@@ -8,6 +8,7 @@ body {
     box-sizing: border-box;
 }
 a { text-decoration: none; color: white}
+button {cursor: pointer;}
 :root { 
     --lightblue: #d0e7fe;
     --black: #1a1a1a;
@@ -177,13 +178,17 @@ a { text-decoration: none; color: white}
     left: 30%;
 }
 .badge { 
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
     border-radius: 50%;
     color: black;
     background-color: var(--orange);
-    padding: 4px 8px;
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -15px;
+    left: -15px;
     box-shadow: 0px 0px 95px 25px rgb(255, 132, 43, 0.9);
 }
 .skill_panel { 
@@ -353,21 +358,20 @@ progress[value]::-webkit-progress-value {
 }
 .contact {
     background-color: var(--lightblue);
-    height: 100vh;
-    position: relative;
+    
+    padding: 4rem 1rem;
+
 }
 .form_container{ 
     color: white;
-    width: 320px;
-    margin: auto;
-    padding: 20px 15px;
+    max-width: 25rem;
+    margin: 0 auto;
+    padding: 1.75rem 1.2rem;
     background-color: var(--deepblue);
     border-radius: 50px;
     box-shadow: 18px 18px 36px #727f8c,
              -18px -18px 36px #ffffff;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    
 }
 .head_wrapper { 
     text-align: center;
@@ -455,18 +459,18 @@ footer {
         grid-gap: 10%;
     }
     .project_section { 
-        height: 100vh;
+        height: fit-content;
     }
     .project_section .dynamic_title {
-        position: relative;
+        position: static;
         z-index: 1;
+        margin: 2rem 0;
     }
     .project_grid_PC { 
         width: 100%;
         display: grid;
         grid-template-columns: 40% 50%;
-        grid-gap: 20px;
         align-items: center;
-        justify-items: center;
+        justify-content: space-between;
     }
 }

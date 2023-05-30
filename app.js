@@ -56,14 +56,25 @@ const project8 = new Projects(
     "https://nrg-builds.github.io/NRG-weather/",
     "https://github.com/NRG-BUILDS/NRG-weather");
 const project9 = new Projects(
-
-    "Movie Information App",
-
-    "movieroom.jpg",
-
-    "https://nrg-builds.github.io/movie-app",
-
-    "https://github.com/NRG-BUILDS/movie-app");
+        "Movie Information App",
+        "movieroom.jpg",
+        "https://nrg-builds.github.io/movie-app",
+        "https://github.com/NRG-BUILDS/movie-app");
+const project10 = new Projects(
+    "Movie Information App (React)",
+    "movieroomReact.png",
+    "https://nrg-movieroom.netlify.app",
+    "https://github.com/NRG-BUILDS/movieroom");
+const project11 = new Projects(
+    "Space Agency App (React + Tailwind)",
+    "space.webp",
+    "https://nrg-space.netlify.app",
+    "https://github.com/NRG-BUILDS/Space");
+const project12 = new Projects(
+    "Responsive News Page",
+    "news.jpg",
+    "https://nrg-builds.github.io/news-page",
+    "https://github.com/NRG-BUILDS/news-page");
 function loadProjectListPc() { 
     let text = ""
     for (i = projectArray.length - 1; i > -1; i--) { 
@@ -116,11 +127,11 @@ function showNav() {
 const sendBtn = document.getElementById('button'); //email send button
 
 function sendMail(event) {
-   event.preventDefault();
-   sendBtn.innerHTML = 'Sending...'
-document.getElementById('emailForm')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+    event.preventDefault();
+    sendBtn.innerHTML = 'Sending...'
+    document.getElementById('emailForm')
+        .addEventListener('submit', function(event) {
+    event.preventDefault();
    sendBtn.innerHTML = 'Sending...';
    const serviceID = 'default_service';
    const templateID = 'template_ocze4iv';
@@ -145,7 +156,8 @@ document.getElementById('emailForm')
     });
 };
 //validate form code
-function validateForm() { 
+function validateForm(e) { 
+    e.preventDefault();
     let name = document.getElementById('from_name');
     let message = document.getElementById('message');
     let email = document.getElementById('reply_to');

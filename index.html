@@ -43,13 +43,13 @@
                 
             </div>
             <div class="textbox t1">
-                <span class="badge">1</span>
+                <div class="badge"><span>1</span></div>
                 <span>Hey there!
-                    I'm a front-end web developer and love to connect. My name is...
+                    I'm a front-end web developer and I love building really cool stuff. My name is...
                 </span>
             </div>
             <div class="textbox t2">
-                <span class="badge">2</span>
+                <div class="badge"><span>2</span></div>
                 <span>I have a strong foundation in
                     HTML, CSS and Javascript and I am skilled in creating 
                     visually appealing websites.
@@ -63,7 +63,7 @@
                 interface of web applications.
                 </span>
                 <div class="contact_button_container">
-                    <a href="#contact"><button>Contact Me</button></a>
+                    <a href="Resume.pdf" download><button>DOWNLOAD CV</button></a>
                 </div>
             </div>    
                 <div id="skills" class="skill_tray reveal">
@@ -73,10 +73,22 @@
                     </div>
                     <div>
                         <label for="CSS3">CSS3        </label>
-                        <progress max="100" value="70">      </progress>
+                        <progress max="100" value="90">      </progress>
                     </div>
                     <div>
                         <label for="Js">JavaScript </label>
+                        <progress max="100" value="85"> </progress>
+                    </div>
+                    <div>
+                        <label for="Js">React </label>
+                        <progress max="100" value="65"> </progress>
+                    </div>
+                    <div>
+                        <label for="Js">Tailwind CSS </label>
+                        <progress max="100" value="75"> </progress>
+                    </div>
+                    <div>
+                        <label for="Js">Exoerience with REST APIs </label>
                         <progress max="100" value="75"> </progress>
                     </div>
                     
@@ -102,17 +114,17 @@
                     <!--javascript generated-->
                 </div>
                 <div class="project_preview">
-                    <img src="furniture.jpg" alt="" id="project_pic">
-                    <p id="project_info"></p>
+                    <img src="./image/favicon.ico" alt="" id="project_pic">
+                    <p id="project_info">HOVER  OVER PROJECT LIST TO PREVIEW</p>
                 </div>
             </div>  
         </section>
-        <section id="contact" class="contact reveal">
+        <section id="contact" class="contact">
             <div class="form_container">
                 <div class="head_wrapper">
                     <span>Reach Out To Me</span>
                 </div>
-                <form id="emailForm">
+                <form onsubmit="validateForm(e)" id="emailForm">
                     <div class="field">
                         <label for="from_name">Name</label>
                     <input type="text" name="from_name" id="from_name">
@@ -126,7 +138,7 @@
                     <input type="text" name="reply_to" id="reply_to">
                     </div>
                     <div class="button_wrapper">
-                        <button id="button" onclick="validateForm()">Send Email</button><br>
+                        <button id="button">Send Email</button><br>
                     <span id="err-message"></span>    
                     </div>
                     
@@ -141,7 +153,7 @@
             
         </section>
         <footer>
-            <p>© EMMANUEL Omolaju (NRG) 2023</p>
+            <p>© Emmanuel Omolaju (NRG) 2023</p>
         </footer>
     <script src="anime.js"></script>    
     <script src="app.js"></script>
