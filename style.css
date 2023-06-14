@@ -184,7 +184,7 @@ button {cursor: pointer;}
     height: 2rem;
     justify-content: center;
     border-radius: 50%;
-    color: black;
+    font-weight: 700;
     background-color: var(--orange);
     position: absolute;
     top: -15px;
@@ -192,7 +192,7 @@ button {cursor: pointer;}
     box-shadow: 0px 0px 95px 25px rgb(255, 132, 43, 0.9);
 }
 .skill_panel { 
-    height: 100vh;
+    
     display: grid;
     grid-template-columns: 100%;
     justify-items: center;
@@ -269,8 +269,9 @@ progress[value]::-webkit-progress-value {
 
 #htmlIcon {top: 5%; left: 10%; animation-delay: .2s; }
 #cssIcon {bottom: 5%; left: 40%; animation-delay: 1s; }
-#jsIcon {top: 5%; right: 10%; animation-delay: .4s; }
+#jsIcon {top: 5%; right: 10%; animation-delay: .4.5s; }
 #bsIcon { bottom: 5%; right: 10%; animation-delay: .4s;}
+#twIcon { bottom: 40%; left: 10%; animation-delay: .3s;}
 #rtIcon { top: 40%; right: 40%;;}
 @keyframes spinIcon { 
     0% { 
@@ -301,32 +302,38 @@ progress[value]::-webkit-progress-value {
 }
 .project_grid_PC { 
     display: none;
+    margin: 1rem 0;
 }
 
 .project_preview { 
-    height: 400px;
+    height: 350px;
     position: relative;
+    border-radius: 10px;
+    animation: slide 0.4s;
+    
+}
+.project_list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+
 }
 .project_list a { 
-    
-    color: white;
-    font-weight: bolder;
+    color: var(--lightblue);
+    font-weight: bolder; 
 }
 .project_list div { 
-    padding: 20px auto;
-    border-bottom: 2px solid var(--blue);
+    padding: 12px 20px;
+    border: 2px solid var(--blue);
+    border-radius: 15px;
     transition: 0.3s;
 }
 .project_list div:hover { 
     border-color: var(--orange);
-    color: var(--lightblue);
+   color: white;
     transform: translateX(10px);
 }
-.project_preview { 
-    border-radius: 10px;
-    animation: slide 0.4s;
-    overflow: hidden;
-}
+
 @keyframes slide {
     0% { transform: translateX(-30px);}
     100% { transform: translateX(0px);}
@@ -339,12 +346,16 @@ progress[value]::-webkit-progress-value {
     object-fit: cover;
 }
 #project_info { 
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+    gap: 5px;
     position: absolute;
     bottom: 0;
     left: 0;
     font-weight: bolder;
     padding: 20px;
-    height: 30%;
+    height: 35%;
     color: white;
     background: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.7));
     margin: 0;
@@ -352,9 +363,32 @@ progress[value]::-webkit-progress-value {
     border-radius: 0 0 inherit;
 }
 #project_info a { 
-    font-size: 24px;
     color: inherit;
-    margin-right: 15px;
+    margin: 0 7.5px;
+}
+.link_pad {
+    display: inline-block;
+    background: rgb(255, 132, 43, 0.35);
+    padding: .5rem;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+    font-size: 24px;
+    
+}
+.project_tools_img {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgb(0, 0, 0, 0.3);
+    padding: .5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(4px);
+}
+.project_tools_img img {
+    height: 1.7rem;
+    width: 1.7rem;
+    
+    object-fit: contain;
 }
 .contact {
     background-color: var(--lightblue);
