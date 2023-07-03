@@ -180,40 +180,29 @@ function showNav() {
     }
 }
 //email code
-const sendBtn = document.getElementById('button'); //email send button
+document.getElementById('emailForm').addEventListener('submit', function(e) {validateForm(e)})
+const sendBtn = document.getElementById('mail_button'); //email send button
 
 function sendMail(event) {
-    event.preventDefault();
-    sendBtn.innerHTML = 'Sending...'
     document.getElementById('emailForm')
         .addEventListener('submit', function(event) {
-    event.preventDefault();
-   sendBtn.innerHTML = 'Sending...';
-   const serviceID = 'default_service';
-   const templateID = 'template_ocze4iv';
-   emailjs.sendForm(serviceID, templateID, document.getElementById('emailForm'))
-    .then(() => {
-      sendBtn.innerHTML = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      sendBtn.innerHTML = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
-   const serviceID = 'default_service';
-   const templateID = 'template_ocze4iv';
-   emailjs.sendForm(serviceID, templateID, document.getElementById('emailForm'))
-    .then(() => {
-      sendBtn.innerHTML = 'Send Email';
-      alert('Sent!');
-    }, (err) => {
-      sendBtn.innerHTML = 'Send Email';
-      alert(JSON.stringify(err));
-    });
+            event.preventDefault();
+            sendBtn.value = 'Sending...';
+            const serviceID = 'default_service';
+            const templateID = 'template_ocze4iv';
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    sendBtn.innerHTML = 'Send Email';
+                    alert('Sent!');
+                    }, (err) => {
+                    sendBtn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+            });
 };
 //validate form code
-function validateForm(e) { 
-    e.preventDefault();
+function validateForm(event) { 
+    event.preventDefault();
     let name = document.getElementById('from_name');
     let message = document.getElementById('message');
     let email = document.getElementById('reply_to');

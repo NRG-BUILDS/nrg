@@ -355,6 +355,7 @@ progress[value]::-webkit-progress-value {
     left: 0;
     font-weight: bolder;
     padding: 20px;
+    
     color: white;
     background: linear-gradient(to bottom, rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.7));
     margin: 0;
@@ -434,14 +435,14 @@ input:invalid {
     text-align: center;
     margin: 30px auto;
 }
-.button_wrapper button { 
+.button_wrapper input { 
     background-color: var(--orange);
     color: white;
     border-radius: 20px;
     padding: 10px 30px;
     border: none;
 }
-.button_wrapper button:hover { 
+.button_wrapper input:active { 
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
 .button-wrapper button:active { 
