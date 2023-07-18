@@ -74,7 +74,7 @@ const project10 = new Projects(
     "Movie Information App",
     "movieroomReact.png",
     ['react', 'css', 'js', 'api'],
-    "https://nrg-movieroom.netlify.app",
+    "https://nrg-movierooom.netlify.app",
     "https://github.com/NRG-BUILDS/movieroom");
 const project11 = new Projects(
     "Space Agency App",
